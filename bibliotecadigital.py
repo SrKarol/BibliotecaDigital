@@ -26,25 +26,6 @@ class BibliotecaDigital:
             try:
                 with open(self.archivo_json, 'r', encoding='utf-8') as f:
                     self.libros = json.load(f)
-            except:
-                self.crear_datos_iniciales()
-        else:
-            self.crear_datos_iniciales()
-
-    def crear_datos_iniciales(self):
-        self.libros = [
-            {"id": 1, "titulo": "Cien años de soledad", "autor": "Gabriel García Márquez"},
-            {"id": 2, "titulo": "Don Quijote de la Mancha", "autor": "Miguel de Cervantes"},
-            {"id": 3, "titulo": "1984", "autor": "George Orwell"},
-            {"id": 4, "titulo": "El principito", "autor": "Antoine de Saint-Exupéry"},
-            {"id": 5, "titulo": "Rayuela", "autor": "Julio Cortázar"},
-            {"id": 6, "titulo": "La sombra del viento", "autor": "Carlos Ruiz Zafón"},
-            {"id": 7, "titulo": "Crónica de una muerte anunciada", "autor": "Gabriel García Márquez"},
-            {"id": 8, "titulo": "El amor en los tiempos del cólera", "autor": "Gabriel García Márquez"},
-            {"id": 9, "titulo": "Crimen y castigo", "autor": "Fiódor Dostoyevski"},
-            {"id": 10, "titulo": "Orgullo y prejuicio", "autor": "Jane Austen"}
-        ]
-        self.guardar_datos()
 
     def guardar_datos(self):
         with open(self.archivo_json, 'w', encoding='utf-8') as f:
